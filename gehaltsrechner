@@ -1,0 +1,23 @@
+#Gehaltsrechner
+
+import os
+clear = lambda: os.system('cls')
+
+stundenlohn = float(input("Stundenlohn in € eingeben: "))
+arbeitsstunden = float(input("Arbeitsstunden pro Tag: "))
+
+clear()
+
+print("Bei einem Stundenlohn von " + str(stundenlohn) + "€ erhältst du für täglich " + str(arbeitsstunden) + " Arbeitsstunden...")
+
+day = stundenlohn * arbeitsstunden
+week = day * 5
+month = week * 4.35
+year = month * 12
+
+print("... " + str(day) + "€ pro Tag")
+print("... " + str(week) + "€ pro Woche")
+print("... " + str(month) + "€ pro Monat")
+print("... und " + str(year) + "€ pro Jahr.")
+
+print(input("\nDrücke Enter um das Programm zu schließen..."))
